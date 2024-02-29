@@ -4,13 +4,13 @@ import { useState } from "react";
 import {
   RiBarChart2Line,
   RiEarthLine,
-  RiMessageLine,
   RiCalendarLine,
   RiLogoutCircleRLine,
   RiArrowRightSLine,
   RiMenu3Line,
   RiCloseLine,
 } from "react-icons/ri";
+import { MdOutlineSupportAgent } from "react-icons/md";
 
 const Sidebar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -95,8 +95,8 @@ const Sidebar = () => {
                 to="/"
                 className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
               >
-                <RiMessageLine className="text-primary" />
-                Messages
+                <MdOutlineSupportAgent className="text-primary" />
+                Technical Support
               </Link>
             </li>
             <li>
