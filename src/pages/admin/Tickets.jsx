@@ -17,7 +17,7 @@ const Tickets = () => {
   return (
     <div>
       {/*title*/}
-      <div className="flex items-center justify-between gap-y-4 mb-10">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-y-4 mb-10">
         <div>
           <h1 className="font-bold text-gray-100 text-xl">Overview</h1>
           <div className="flex items-center gap-2 text-sm text-gray-500">
@@ -59,8 +59,8 @@ const Tickets = () => {
       </div>
       <Tab.Group>
         <div className="bg-secondary-100 p-8 rounded-bl-lg rounded-br-lg ">
-          <Tab.List className="flex items-center justify-between gap-2 bg-secondary-900/50 py-3 px-4 rounded-lg">
-            <div className="flex items-center gap-2">
+          <Tab.List className="flex flex-col md:flex-row md:items-center md:justify-between gap-x-2 gap-y-6 bg-secondary-900/50 py-3 px-4 rounded-lg">
+            <div className="flex flex-col md:flex-row md:items-center gap-2">
               <Tab className="py-2 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100transition-colors outline-none ui-selected:bg-secondary-900 ui-selected:text-gray-100">
                 Overview
               </Tab>
@@ -71,7 +71,7 @@ const Tickets = () => {
                 FAQ
               </Tab>
             </div>
-            <div>
+            <div className="flex justify-center">
               <button className="bg-primary/90 text-black hover:bg-primary flex items-center gap-4 py-2 px-4 rounded-lg transition-colors">
                 Create
               </button>
@@ -84,7 +84,9 @@ const Tickets = () => {
               <div className="bg-secondary-100 p-8 rounded-lg">
                 {/*Title Card */}
                 <div className="flex items-center justify-between mb-8">
-                  <h1 className="text-white text-2xl">Popular Tickets</h1>
+                  <h1 className="text-white text-xl md:text-2xl">
+                    Popular Tickets
+                  </h1>
                   <Link to="/" className="flex items-center gap-2 text-primary">
                     Support <RiArrowRightLine />
                   </Link>
@@ -92,10 +94,10 @@ const Tickets = () => {
                 {/*Content card */}
                 <div>
                   <Disclosure>
-                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
-                      <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                    <Disclosure.Button className="py-2 text-sm md:text-lg flex md:items-center justify-between gap-4">
+                      <RiArrowRightSLine className=" text-sm md:text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform transition-all" />
                       What admin theme does?
-                      <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                      <span className="hidden lg:block bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
                         React
                       </span>
                     </Disclosure.Button>
@@ -117,10 +119,10 @@ const Tickets = () => {
                     </Transition>
                   </Disclosure>
                   <Disclosure>
-                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
-                      <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                    <Disclosure.Button className="py-2 text-sm md:text-lg flex md:items-center justify-between gap-4">
+                      <RiArrowRightSLine className=" text-sm md:text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform transition-all" />
                       How Extended License works?
-                      <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                      <span className="hidden lg:block bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
                         Laravel
                       </span>
                     </Disclosure.Button>
@@ -142,10 +144,10 @@ const Tickets = () => {
                     </Transition>
                   </Disclosure>
                   <Disclosure>
-                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
-                      <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                    <Disclosure.Button className="py-2 text-sm md:text-lg flex md:items-center justify-between gap-4">
+                      <RiArrowRightSLine className=" text-sm md:text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform transition-all" />
                       How can I import Google fonts?
-                      <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                      <span className="hidden lg:block bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
                         Vue JS
                       </span>
                     </Disclosure.Button>
@@ -167,10 +169,10 @@ const Tickets = () => {
                     </Transition>
                   </Disclosure>
                   <Disclosure>
-                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
-                      <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                    <Disclosure.Button className="py-2 text-sm md:text-lg flex md:items-center justify-between gap-4">
+                      <RiArrowRightSLine className="text-sm md:text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform transition-all" />
                       What admin theme does?
-                      <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                      <span className="hidden lg:block bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
                         Next JS
                       </span>
                     </Disclosure.Button>
@@ -196,7 +198,7 @@ const Tickets = () => {
               <div className="bg-secondary-100 p-8 rounded-lg">
                 {/*Title Card */}
                 <div className="flex items-center justify-between mb-8">
-                  <h1 className="text-white text-2xl">FAQ</h1>
+                  <h1 className="text-white text-xl md:text-2xl">FAQ</h1>
                   <Link to="/" className="flex items-center gap-2 text-primary">
                     Full FAQS <RiArrowRightLine />
                   </Link>
@@ -204,10 +206,10 @@ const Tickets = () => {
                 {/*Content card */}
                 <div>
                   <Disclosure>
-                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
-                      <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                    <Disclosure.Button className="py-2 text-sm md:text-lg flex md:items-center justify-between gap-4">
+                      <RiArrowRightSLine className=" text-sm md:text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform transition-all" />
                       What admin theme does?
-                      <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                      <span className="hidden lg:block bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
                         React
                       </span>
                     </Disclosure.Button>
@@ -229,10 +231,10 @@ const Tickets = () => {
                     </Transition>
                   </Disclosure>
                   <Disclosure>
-                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
-                      <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                    <Disclosure.Button className="py-2 text-sm md:text-lg flex md:items-center justify-between gap-4">
+                      <RiArrowRightSLine className=" text-sm md:text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform transition-all" />
                       How Extended License works?
-                      <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                      <span className="hidden lg:block bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
                         Laravel
                       </span>
                     </Disclosure.Button>
@@ -254,10 +256,10 @@ const Tickets = () => {
                     </Transition>
                   </Disclosure>
                   <Disclosure>
-                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
-                      <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                    <Disclosure.Button className="py-2 text-sm md:text-lg flex md:items-center justify-between gap-4">
+                      <RiArrowRightSLine className=" text-sm md:text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform transition-all" />
                       How can I import Google fonts?
-                      <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                      <span className="hidden lg:block bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
                         Vue JS
                       </span>
                     </Disclosure.Button>
@@ -279,10 +281,10 @@ const Tickets = () => {
                     </Transition>
                   </Disclosure>
                   <Disclosure>
-                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
-                      <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                    <Disclosure.Button className="py-2 text-sm md:text-lg flex md:items-center justify-between gap-4">
+                      <RiArrowRightSLine className=" text-sm md:text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform transition-all" />
                       What admin theme does?
-                      <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                      <span className="hidden lg:block bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
                         Next JS
                       </span>
                     </Disclosure.Button>
@@ -308,9 +310,9 @@ const Tickets = () => {
             </div>
           </Tab.Panel>
           <Tab.Panel>
-            <div className="bg-secondary-100 p-8 rounded-lg grid grid-cols-1 md:grid-cols-4">
+            <div className="bg-secondary-100 p-8 rounded-lg grid grid-cols-1 xl:grid-cols-4 gap-8">
               {/*Section 1*/}
-              <div className="col-span-3 p-8">
+              <div className="md:col-span-3">
                 <form>
                   <div className="relative">
                     <RiSearch2Line className="absolute top-1/2 -translate-y-1/2 left-4" />
@@ -326,15 +328,35 @@ const Tickets = () => {
                 <div className="">
                   {/*ticket*/}
                   <div className="flex flex-col gap-2 mb-8">
-                    <div className="flex items-center gap-4">
-                      <RiTicketLine className="text-2xl text-yellow-500" />
+                    <div className="flex flex-wrap items-center gap-4">
+                      <RiTicketLine className="md:text-2xl text-yellow-500" />
                       <Link
                         to="/"
-                        className="text-xl hover:text-blue-500 transition-colors"
+                        className="md:text-xl hover:text-blue-500 transition-colors"
                       >
                         How to use Netronic with Django Framework?
                       </Link>
-                      <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                      <span className="hidden md:block bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                        React
+                      </span>
+                    </div>
+                    <div className="md:px-10">
+                      <p className="text-gray-500">
+                        By Keenthemes to save tons and more to time money
+                        projects are listed and outstanding.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2 mb-8">
+                    <div className="flex flex-wrap items-center gap-4">
+                      <RiTicketLine className="md:text-2xl text-blue-500" />
+                      <Link
+                        to="/"
+                        className="md:text-xl hover:text-blue-500 transition-colors"
+                      >
+                        How to use Netronic with Django Framework?
+                      </Link>
+                      <span className="hidden md:block bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
                         React
                       </span>
                     </div>
@@ -346,15 +368,15 @@ const Tickets = () => {
                     </div>
                   </div>
                   <div className="flex flex-col gap-2 mb-8">
-                    <div className="flex items-center gap-4">
-                      <RiTicketLine className="text-2xl text-blue-500" />
+                    <div className="flex flex-wrap items-center gap-4">
+                      <RiTicketLine className="md:text-2xl text-green-500" />
                       <Link
                         to="/"
-                        className="text-xl hover:text-blue-500 transition-colors"
+                        className="md:text-xl hover:text-blue-500 transition-colors"
                       >
                         How to use Netronic with Django Framework?
                       </Link>
-                      <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                      <span className="hidden md:block bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
                         React
                       </span>
                     </div>
@@ -366,15 +388,15 @@ const Tickets = () => {
                     </div>
                   </div>
                   <div className="flex flex-col gap-2 mb-8">
-                    <div className="flex items-center gap-4">
-                      <RiTicketLine className="text-2xl text-green-500" />
+                    <div className="flex flex-wrap items-center gap-4">
+                      <RiTicketLine className="md:text-2xl text-yellow-500" />
                       <Link
                         to="/"
-                        className="text-xl hover:text-blue-500 transition-colors"
+                        className="md:text-xl hover:text-blue-500 transition-colors"
                       >
                         How to use Netronic with Django Framework?
                       </Link>
-                      <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                      <span className="hidden md:block bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
                         React
                       </span>
                     </div>
@@ -386,35 +408,15 @@ const Tickets = () => {
                     </div>
                   </div>
                   <div className="flex flex-col gap-2 mb-8">
-                    <div className="flex items-center gap-4">
-                      <RiTicketLine className="text-2xl text-yellow-500" />
+                    <div className="flex flex-wrap items-center gap-4">
+                      <RiTicketLine className="md:text-2xl text-yellow-500" />
                       <Link
                         to="/"
-                        className="text-xl hover:text-blue-500 transition-colors"
+                        className="md:text-xl hover:text-blue-500 transition-colors"
                       >
                         How to use Netronic with Django Framework?
                       </Link>
-                      <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
-                        React
-                      </span>
-                    </div>
-                    <div className="px-10">
-                      <p className="text-gray-500">
-                        By Keenthemes to save tons and more to time money
-                        projects are listed and outstanding.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-2 mb-8">
-                    <div className="flex items-center gap-4">
-                      <RiTicketLine className="text-2xl text-yellow-500" />
-                      <Link
-                        to="/"
-                        className="text-xl hover:text-blue-500 transition-colors"
-                      >
-                        How to use Netronic with Django Framework?
-                      </Link>
-                      <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                      <span className="hidden md:block bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
                         React
                       </span>
                     </div>
@@ -456,8 +458,8 @@ const Tickets = () => {
                 </div>
               </div>
               {/*Section 2 */}
-              <div>
-                <div className="bg-secondary-900 p-8 rounded-lg mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-8">
+                <div className="bg-secondary-900 p-8 rounded-lg xl:mb-8">
                   <h1 className="text-2xl text-white mb-8">More Channels</h1>
                   <div>
                     <div className="flex items-center gap-4 mb-8">
@@ -565,15 +567,294 @@ const Tickets = () => {
           </Tab.Panel>
           <Tab.Panel>
             <div className="bg-secondary-100 p-8 rounded-lg">
-              <div>
-                <h1 className="text-2xl text-white mb-2">
-                  Frequently Asked Questions
-                </h1>
+              <div className="mb-10">
+                <h1 className="text-2xl text-white mb-2">How does it work?</h1>
                 <p className="text-gray-500">
-                  First, a disclaimer, the entire process of writing a blog post
-                  often takes more than a couple of hours, even if you can type
-                  eighty words as per minute and your writing skills are sharp.
+                  First, a disclaimer, -the entire process of writing a blog
+                  post often takes more than a couple of hours, even if you can
+                  type eighty words as per minute and your writing skills are
+                  sharp.
                 </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/*Section 1 */}
+                <div className="">
+                  <h1 className="text-xl text-white mb-8">Buying Product</h1>
+                  <div className="border-b border-dashed border-gray-600 p-2">
+                    <Disclosure>
+                      <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                        <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                        What admin theme does?
+                        <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                          React
+                        </span>
+                      </Disclosure.Button>
+                      <Transition
+                        enter="transition duration-100 ease-out"
+                        enterFrom="transform scale-95 opacity-0"
+                        enterTo="transform scale-100 opacity-100"
+                        leave="transition duration-75 ease-out"
+                        leaveFrom="transform scale-100 opacity-100"
+                        leaveTo="transform scale-95 opacity-0"
+                      >
+                        <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                          By Keenthemes to save tons and more to time money
+                          projects are listed and outstanding.
+                          <Link to="/" className="text-primary">
+                            Check Out
+                          </Link>
+                        </Disclosure.Panel>
+                      </Transition>
+                    </Disclosure>
+                  </div>
+                  <div className="border-b border-dashed border-gray-600 p-2">
+                    <Disclosure>
+                      <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                        <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                        What admin theme does?
+                        <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                          React
+                        </span>
+                      </Disclosure.Button>
+                      <Transition
+                        enter="transition duration-100 ease-out"
+                        enterFrom="transform scale-95 opacity-0"
+                        enterTo="transform scale-100 opacity-100"
+                        leave="transition duration-75 ease-out"
+                        leaveFrom="transform scale-100 opacity-100"
+                        leaveTo="transform scale-95 opacity-0"
+                      >
+                        <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                          By Keenthemes to save tons and more to time money
+                          projects are listed and outstanding.
+                          <Link to="/" className="text-primary">
+                            Check Out
+                          </Link>
+                        </Disclosure.Panel>
+                      </Transition>
+                    </Disclosure>
+                  </div>
+                  <div className="border-b border-dashed border-gray-600 p-2">
+                    <Disclosure>
+                      <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                        <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                        What admin theme does?
+                        <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                          React
+                        </span>
+                      </Disclosure.Button>
+                      <Transition
+                        enter="transition duration-100 ease-out"
+                        enterFrom="transform scale-95 opacity-0"
+                        enterTo="transform scale-100 opacity-100"
+                        leave="transition duration-75 ease-out"
+                        leaveFrom="transform scale-100 opacity-100"
+                        leaveTo="transform scale-95 opacity-0"
+                      >
+                        <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                          By Keenthemes to save tons and more to time money
+                          projects are listed and outstanding.
+                          <Link to="/" className="text-primary">
+                            Check Out
+                          </Link>
+                        </Disclosure.Panel>
+                      </Transition>
+                    </Disclosure>
+                  </div>
+                  <div className="border-b border-dashed border-gray-600 p-2">
+                    <Disclosure>
+                      <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                        <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                        What admin theme does?
+                        <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                          React
+                        </span>
+                      </Disclosure.Button>
+                      <Transition
+                        enter="transition duration-100 ease-out"
+                        enterFrom="transform scale-95 opacity-0"
+                        enterTo="transform scale-100 opacity-100"
+                        leave="transition duration-75 ease-out"
+                        leaveFrom="transform scale-100 opacity-100"
+                        leaveTo="transform scale-95 opacity-0"
+                      >
+                        <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                          By Keenthemes to save tons and more to time money
+                          projects are listed and outstanding.
+                          <Link to="/" className="text-primary">
+                            Check Out
+                          </Link>
+                        </Disclosure.Panel>
+                      </Transition>
+                    </Disclosure>
+                  </div>
+                  <div className="border-b border-dashed border-gray-600 p-2">
+                    <Disclosure>
+                      <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                        <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                        What admin theme does?
+                        <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                          React
+                        </span>
+                      </Disclosure.Button>
+                      <Transition
+                        enter="transition duration-100 ease-out"
+                        enterFrom="transform scale-95 opacity-0"
+                        enterTo="transform scale-100 opacity-100"
+                        leave="transition duration-75 ease-out"
+                        leaveFrom="transform scale-100 opacity-100"
+                        leaveTo="transform scale-95 opacity-0"
+                      >
+                        <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                          By Keenthemes to save tons and more to time money
+                          projects are listed and outstanding.
+                          <Link to="/" className="text-primary">
+                            Check Out
+                          </Link>
+                        </Disclosure.Panel>
+                      </Transition>
+                    </Disclosure>
+                  </div>
+                </div>
+                {/*Section 2 */}
+                <div className="">
+                  <h1 className="text-xl text-white mb-8">Installation</h1>
+                  <div className="border-b border-dashed border-gray-600 p-2">
+                    <Disclosure>
+                      <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                        <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                        What admin theme does?
+                        <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                          React
+                        </span>
+                      </Disclosure.Button>
+                      <Transition
+                        enter="transition duration-100 ease-out"
+                        enterFrom="transform scale-95 opacity-0"
+                        enterTo="transform scale-100 opacity-100"
+                        leave="transition duration-75 ease-out"
+                        leaveFrom="transform scale-100 opacity-100"
+                        leaveTo="transform scale-95 opacity-0"
+                      >
+                        <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                          By Keenthemes to save tons and more to time money
+                          projects are listed and outstanding.
+                          <Link to="/" className="text-primary">
+                            Check Out
+                          </Link>
+                        </Disclosure.Panel>
+                      </Transition>
+                    </Disclosure>
+                  </div>
+                  <div className="border-b border-dashed border-gray-600 p-2">
+                    <Disclosure>
+                      <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                        <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                        What admin theme does?
+                        <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                          React
+                        </span>
+                      </Disclosure.Button>
+                      <Transition
+                        enter="transition duration-100 ease-out"
+                        enterFrom="transform scale-95 opacity-0"
+                        enterTo="transform scale-100 opacity-100"
+                        leave="transition duration-75 ease-out"
+                        leaveFrom="transform scale-100 opacity-100"
+                        leaveTo="transform scale-95 opacity-0"
+                      >
+                        <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                          By Keenthemes to save tons and more to time money
+                          projects are listed and outstanding.
+                          <Link to="/" className="text-primary">
+                            Check Out
+                          </Link>
+                        </Disclosure.Panel>
+                      </Transition>
+                    </Disclosure>
+                  </div>
+                  <div className="border-b border-dashed border-gray-600 p-2">
+                    <Disclosure>
+                      <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                        <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                        What admin theme does?
+                        <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                          React
+                        </span>
+                      </Disclosure.Button>
+                      <Transition
+                        enter="transition duration-100 ease-out"
+                        enterFrom="transform scale-95 opacity-0"
+                        enterTo="transform scale-100 opacity-100"
+                        leave="transition duration-75 ease-out"
+                        leaveFrom="transform scale-100 opacity-100"
+                        leaveTo="transform scale-95 opacity-0"
+                      >
+                        <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                          By Keenthemes to save tons and more to time money
+                          projects are listed and outstanding.
+                          <Link to="/" className="text-primary">
+                            Check Out
+                          </Link>
+                        </Disclosure.Panel>
+                      </Transition>
+                    </Disclosure>
+                  </div>
+                  <div className="border-b border-dashed border-gray-600 p-2">
+                    <Disclosure>
+                      <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                        <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                        What admin theme does?
+                        <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                          React
+                        </span>
+                      </Disclosure.Button>
+                      <Transition
+                        enter="transition duration-100 ease-out"
+                        enterFrom="transform scale-95 opacity-0"
+                        enterTo="transform scale-100 opacity-100"
+                        leave="transition duration-75 ease-out"
+                        leaveFrom="transform scale-100 opacity-100"
+                        leaveTo="transform scale-95 opacity-0"
+                      >
+                        <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                          By Keenthemes to save tons and more to time money
+                          projects are listed and outstanding.
+                          <Link to="/" className="text-primary">
+                            Check Out
+                          </Link>
+                        </Disclosure.Panel>
+                      </Transition>
+                    </Disclosure>
+                  </div>
+                  <div className="border-b border-dashed border-gray-600 p-2">
+                    <Disclosure>
+                      <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                        <RiArrowRightSLine className=" text-xl ui-open:rotate-90 ui-open:text-primary ui-open:transform trasition-all" />
+                        What admin theme does?
+                        <span className="bg-secondary-900 text-white text-sm py-1/2 px-2 rounded-lg">
+                          React
+                        </span>
+                      </Disclosure.Button>
+                      <Transition
+                        enter="transition duration-100 ease-out"
+                        enterFrom="transform scale-95 opacity-0"
+                        enterTo="transform scale-100 opacity-100"
+                        leave="transition duration-75 ease-out"
+                        leaveFrom="transform scale-100 opacity-100"
+                        leaveTo="transform scale-95 opacity-0"
+                      >
+                        <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                          By Keenthemes to save tons and more to time money
+                          projects are listed and outstanding.
+                          <Link to="/" className="text-primary">
+                            Check Out
+                          </Link>
+                        </Disclosure.Panel>
+                      </Transition>
+                    </Disclosure>
+                  </div>
+                </div>
               </div>
             </div>
           </Tab.Panel>
