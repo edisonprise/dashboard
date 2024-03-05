@@ -11,6 +11,7 @@ import ForgetPassword from "./pages/auth/ForgetPassword";
 import Home from "./pages/admin/Home";
 import Profile from "./pages/admin/Profile";
 import Error404 from "./pages/Error404";
+import Tickets from "./pages/admin/Tickets";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         <Route path="/olvide-password" element={<ForgetPassword />} />
         <Route path="/" element={<LayoutAdmin />}>
           <Route index element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="tickets" element={<Tickets />} />
         </Route>
         <Route path="*" element={<Error404 />} />
       </Routes>
