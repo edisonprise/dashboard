@@ -1,5 +1,13 @@
+import CardTicket from "../../components/CardTicket";
+
 const Home = () => {
-  return <h1>Home</h1>;
+  return (
+    <div>
+      <div className="grid grid-cols-1 md:grid-cols">
+      <CardTicket />   
+      </div>
+    </div>
+  );
 };
 
 export default Home;
